@@ -1,0 +1,332 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fa" class="no-js">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<title>Procard - قالب شخصی</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+		<link rel="shortcut icon" href="{% static "images/favicon.png" %}">
+
+		<link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}" type="text/css">
+		<link rel="stylesheet" href="{% static "css/normalize.css" %}" type="text/css">
+		<link rel="stylesheet" href="{% static "css/animate.css" %}" type="text/css">
+		<link rel="stylesheet" href="{% static "css/transition-animations.css" %}" type="text/css">
+		<link rel="stylesheet" href="{% static "css/owl.carousel.css" %}" type="text/css">
+		<link rel="stylesheet" href="{% static "css/magnific-popup.css" %}" type="text/css">
+		<link rel="stylesheet" href="{% static "css/main-green.css" %}" type="text/css">
+
+		<!-- This styles needs for demo -->
+		<link rel="stylesheet" href="{% static "preview/lmpixels-demo-panel.css" %}" type="text/css">
+		<!-- /This styles needs for demo -->
+
+		<script src="{% static 'js/jquery-2.1.3.min.js' %}"></script>
+		<script src="{% static 'js/modernizr.custom.js' %}"></script>
+<!-- <script src="https://www.google.com/recaptcha/api.js"></script> -->
+	</head>
+
+	<body class="material-template">
+		<!-- Loading animation -->
+		<div class="preloader">
+			<div class="preloader-animation">
+				<div class="preloader-spinner">
+				</div>
+			</div>
+		</div>
+		<!-- /Loading animation -->
+
+		<div id="page" class="page">
+			<!-- Header -->
+			<header id="site_header" class="header mobile-menu-hide">
+				<div class="header-content">
+					<div class="site-title-block mobile-hidden">
+						<div class="site-title">navid <span>yosufie</span></div>
+					</div>
+
+					<!-- Navigation -->
+					<div class="site-nav">
+						<!-- Main menu -->
+						<ul id="nav" class="site-main-menu">
+							<li>
+								<a class="pt-trigger" href="#home">خانه</a><!-- href value = data-id without # of .pt-page. -->
+							</li>
+							<li>
+								<a class="pt-trigger" href="#resume">رزومه</a>
+							</li>
+							<li>
+								<a class="pt-trigger" href="#contact">تماس</a>
+							</li>
+						</ul>
+						<!-- /Main menu -->
+					</div>
+					<!-- Navigation -->
+				</div>
+			</header>
+			<!-- /Header -->
+
+			<!-- Mobile Header -->
+			<div class="mobile-header mobile-visible">
+				<div class="mobile-logo-container">
+                    {% for i in about_me %}
+					<div class="mobile-site-title">{{ i.fname }}</div>
+				</div>
+
+				<a class="menu-toggle mobile-visible">
+					<i class="fa fa-bars"></i>
+				</a>
+			</div>
+			<!-- /Mobile Header -->
+
+			<!-- Main Content -->
+			<div id="main" class="site-main">
+				<!-- Page changer wrapper -->
+				<div class="pt-wrapper">
+					<!-- Subpages -->
+					<div class="subpages">
+
+						<!-- Home Subpage -->
+						<section class="pt-page" data-id="home">
+							<div class="section-inner start-page-content">
+								<div class="page-header">
+									<div class="row">
+										<div class="col-sm-4 col-md-4 col-lg-4">
+											<div class="photo">
+
+												<img src="{{ i.Imag_profile.url }}" alt="">
+											</div>
+										</div>
+
+										<div class="col-sm-8 col-md-8 col-lg-8">
+											<div class="title-block">
+												<h1>{{ i.fname }}</h1>
+												<div class="owl-carousel text-rotation">                                    
+													<div class="item">
+														<div class="sp-subtitle">Python Developer</div>
+													</div>
+													<div class="item">
+														<div class="sp-subtitle">Django</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="social-links">
+												<a href="{{ i.github }}"><i class="fa fa-github"></i></a>
+												<a href="{{ i.instagram }}"><i class="fa fa-instagram"></i></a>
+												<a href="{{ i.whatsapp }}"><i class="fa fa-whatsapp"></i></a>
+												<a href="{{ i.linkedin }}"><i class="fa fa-linkedin"></i></a>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="page-content">
+									<div class="row">
+
+										<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+											<div class="about-me">
+												<div class="block-title">
+													<h3>درباره <span>من</span></h3>
+												</div>
+												<p>{{ i.description }}</p>
+											</div>
+										</div>
+
+										<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+											<ul class="info-list">
+												<li><span class="title">سن</span> <span class="value">{{ i.age }}</span></li>
+												<li><span class="title">محل سکونت</span> <span class="value">{{ i.city }}</span></li>
+												<li><span class="title">آدرس</span> <span class="value">{{ i.adderss }}</span></li>
+												<li><span class="title">ایمیل</span> <span class="value ltr_text"><a href="#">{{ i.email }}</a></span></li>
+												<li><span class="title">تلفن</span> <span class="value ltr_text">{{ i.Phon }}</span></li>
+												<li><span class="title">وضعیت</span> <span class="value available">آماده</span></li>
+											</ul>
+										</div>
+                                                {% endfor %}
+									</div>
+								</div>
+							</div>
+						</section>
+						<!-- End of Home Subpage -->
+
+						<!-- Resume Subpage -->
+						<section class="pt-page" data-id="resume">
+							<div class="section-inner custom-page-content">
+								<div class="page-header color-1">
+									<h2>رزومه</h2>
+								</div>
+								<div class="page-content">
+									
+									<div class="row">
+										<div class="col-sm-6 col-md-6 col-lg-6">
+											<div class="block">
+												<div class="block-title">
+													<h3>مهارت ها</h3>
+												</div>
+												{% for i in show_cv %}
+												<div class="timeline">
+													<!-- Education 1 -->
+													<div class="timeline-item">
+														<h4 class="item-title">{{ i.title }}</h4>
+													</div>
+													{% endfor %}
+													<!-- / Education 1 -->
+												</div>
+											</div>
+										</div>
+									<div class="row">
+
+										<div class="col-sm-6 col-md-6 col-lg-6">
+											<div class="block">
+												<div class="block-title">
+													<h3>مهارت های <span>کدنویسی</span></h3>
+												</div>
+												<div class="skills-info">
+													<h4>Pythom</h4>                               
+													<div class="skill-container">
+														<div class="skill-percentage skill-8"></div>
+													</div>
+
+													<h4>Django</h4>
+													<div class="skill-container">
+														<div class="skill-percentage skill-3"></div>
+													</div>
+
+													<h4>CSS AND HTML</h4>
+													<div class="skill-container">
+														<div class="skill-percentage skill-7"></div>
+													</div> 
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+						<!-- End of Resume Subpage -->
+
+
+						<!-- Contact Subpage -->
+						<section class="pt-page" data-id="contact">
+							<div class="section-inner custom-page-content">
+								<div class="page-header color-1">
+									<h2>تماس</h2>
+								</div>
+								<div class="page-content">
+
+									<div class="row">
+										<div class="col-sm-6 col-md-6">
+											<div class="block-title">
+												<h3>با من در <span>ارتباط</span> باشید</h3>
+											</div>
+											<!-- Google Map -->
+											<div id="map" class="map">
+												<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d32644.16108052952!2d51.57751104772995!3d30.681981899844764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fb0a4e92c4c3301%3A0x73aa1c1fdf90fa3d!2zMzDCsDQxJzM0LjYiTiA1McKwMzQnMTQuNSJF!5e0!3m2!1sfa!2s!4v1660600994418!5m2!1sfa!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+											</div>
+											<!-- End of Google Map -->
+                                                {% for i in about_me %}
+											<div class="contact-info-block">
+												<div class="ci-icon">
+													<i class="fa fa-map-marker"></i>
+												</div>
+												<div class="ci-text">
+													<p>{{ i.adderss }}</p>
+												</div>
+											</div>
+											<div class="contact-info-block">
+												<div class="ci-icon">
+													<i class="fa fa-envelope"></i>
+												</div>
+												<div class="ci-text">
+													<p><span class="ltr_text">{{ i.email }}</span></p>
+												</div>
+											</div>
+											<div class="contact-info-block">
+												<div class="ci-icon">
+													<i class="fa fa-phone"></i>
+												</div>
+												<div class="ci-text">
+													<p><span class="ltr_text">{{ i.Phon }}</span></p>
+												</div>
+											</div>
+											<div class="contact-info-block">
+												<div class="ci-icon">
+													<i class="fa fa-check"></i>
+												</div>
+												<div class="ci-text">
+													<p>آماده خدمت رسانی</p>
+												</div>
+											</div>
+										</div>
+                                            {% endfor %}
+										<div class="col-sm-6 col-md-6">
+											<div class="block-title">
+												<h3><span>تماس</span> با من</h3>
+											</div>
+											<form method="post">
+                                                {% csrf_token %}
+												<div class="messages"></div>
+
+												<div class="controls">
+													<div class="form-group form-group-with-icon">
+														<i class="fa fa-user"></i>
+														<label>نام کامل</label>
+														<input id="form_name" type="text" name="name" class="form-control"  data-error="وارد کردن نام الزامی است.">
+														<div class="form-control-border"></div>
+														<div class="help-block with-errors"></div>
+													</div>
+
+													<div class="form-group form-group-with-icon">
+														<i class="fa fa-envelope"></i>
+														<label>آدرس ایمیل</label>
+														<input id="form_email" type="email" name="email" class="form-control" placeholder required="required" dir="ltr" data-error="وارد کردن ایمیل معتبر الزامی است.">
+														<div class="form-control-border"></div>
+														<div class="help-block with-errors"></div>
+													</div>
+
+													<div class="form-group form-group-with-icon">
+														<i class="fa fa-comment"></i>
+														<label>پیام  برای من ...</label>
+														<textarea id="form_message" name="message" class="form-control" placeholder rows="4" required="required" data-error="لطفا پیام خود را وارد نمایید."></textarea>
+														<div class="form-control-border"></div>
+														<div class="help-block with-errors"></div>
+
+													</div>
+                                                    <button class="button" type="submit" >send</button>
+													<!-- <div class="g-recaptcha" data-sitekey="6LdqmCAUAAAAAMMNEZvn6g4W5e0or2sZmAVpxVqI"></div> -->
+
+
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+						<!-- End Contact Subpage -->
+
+					</div>
+				</div>
+				<!-- /Page changer wrapper -->
+			</div>
+			<!-- /Main Content -->
+		</div>
+		<footer>
+
+		</footer>
+		<script type="text/javascript" src="{% static "js/bootstrap.min.js" %}"></script>
+		<script type="text/javascript" src="{% static "js/pages-switcher.js" %}"></script>
+		<script type="text/javascript" src="{% static "js/validator.js" %}"></script>
+		<script type="text/javascript" src="{% static "js/jquery.shuffle.min.js" %}"></script>
+		<script type="text/javascript" src="{% static "js/masonry.pkgd.min.js" %}"></script>
+		<script type="text/javascript" src="{% static "js/owl.carousel.min.js" %}"></script>
+		<script type="text/javascript" src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+		<script type="text/javascript" src="{% static "js/jquery.hoverdir.js" %}"></script>
+		<script type="text/javascript" src="{% static "js/main.js" %}"></script>
+
+		<!-- Demo Color changer Script -->
+		<script src="{% static "preview/lmpixels-demo-panel.js" %}"></script>
+		<!-- /Demo Color changer Script -->
+	</body>
+</html>
