@@ -22,8 +22,8 @@
 		<link rel="stylesheet" href="{% static "preview/lmpixels-demo-panel.css" %}" type="text/css">
 		<!-- /This styles needs for demo -->
 
-		<script src="{% static 'js/jquery-2.1.3.min.js' %}"></script>
-		<script src="{% static 'js/modernizr.custom.js' %}"></script>
+		<script src="{% static "js/jquery-2.1.3.min.js" %}"></script>
+		<script src="{% static "js/modernizr.custom.js" %}"></script>
 <!-- <script src="https://www.google.com/recaptcha/api.js"></script> -->
 	</head>
 
@@ -54,6 +54,9 @@
 							</li>
 							<li>
 								<a class="pt-trigger" href="#resume">رزومه</a>
+							</li>
+							<li>
+								<a class="pt-trigger" href="#blog">وبلاگ</a>
 							</li>
 							<li>
 								<a class="pt-trigger" href="#contact">تماس</a>
@@ -162,7 +165,7 @@
 										<div class="col-sm-6 col-md-6 col-lg-6">
 											<div class="block">
 												<div class="block-title">
-													<h3>مهارت ها</h3>
+													<h3>ابزار ها</h3>
 												</div>
 												{% for i in show_cv %}
 												<div class="timeline">
@@ -205,6 +208,45 @@
 							</div>
 						</section>
 						<!-- End of Resume Subpage -->
+
+								
+						<!-- Blog Subpage -->
+						<section class="pt-page" data-id="blog">
+							<div class="section-inner custom-page-content">
+								<div class="page-header color-1">
+									<h2>بلاگ</h2>
+								</div>
+								<div class="page-content">
+
+									<!-- Blog Posts Grid -->
+									<div class="blog-masonry two-columns">
+										<!-- Blog Post 1 -->
+										{% for article in articels %}
+										<div class="item">
+											<div class="blog-card">
+												<div class="media-block">
+													<a href="article/{{ article.id }}">
+														<img class="post-image img-responsive" src="{{ article.image.url }}" alt="blog-post-1">
+														<div class="mask"></div>
+														<div class="post-date"><span class="day"></span><span class="month">{{ article.created }}</span><!--<span class="year">2016</span>--></div>
+													</a>
+												</div>
+												<div class="post-info">
+													<ul class="category">
+														<li><a href="#">{{ article.cateqory.title }}</a></li>
+													</ul>
+													<a href="article/{{ article.id }}"><h4 class="blog-item-title">{{ article.title }}</h4></a>
+												</div>
+											</div>
+										</div>
+										{% endfor %}
+										<!-- End of Blog Post 1 -->
+									</div>
+									<!-- Blog Posts Grid -->
+								</div>
+							</div>
+						</section>
+						<!-- /Blog Subpage -->
 
 
 						<!-- Contact Subpage -->
