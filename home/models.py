@@ -58,27 +58,68 @@ class Cateqory(models.Model):
 class Article(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=50)
+    image = models.ImageField(upload_to="article/imag", null=True, blank=True)
+    body = models.TextField(blank=True)
     
     title_1 = models.CharField(max_length=50)
-    image_body_1 = models.ImageField()
+    body_1 = models.TextField()
+    image_body_1 = models.ImageField(upload_to="article/imag", null=True, blank=True)
     
     title_2 = models.CharField(max_length=50)
-    image_body_2 = models.ImageField()
+    body_2 = models.TextField()
+    image_body_2 = models.ImageField(upload_to="article/imag", null=True, blank=True)
     
-    title_3 = models.CharField(max_length=50)
-    image_body_3 = models.ImageField()
+    title_3 = models.CharField(max_length=50, blank=True)
+    body_3 = models.TextField()
+    image_body_3 = models.ImageField(upload_to="article/imag", null=True, blank=True)
     
-    title_4 = models.CharField(max_length=50)
-    image_body_4 = models.ImageField()
+    title_4 = models.CharField(max_length=50, blank=True)
+    body_4 = models.TextField(blank=True)
+    image_body_4 = models.ImageField(upload_to="article/imag", null=True, blank=True)
+    
+    title_5 = models.CharField(max_length=50, blank=True)
+    body_5 = models.TextField(blank=True)
+    image_body_5 = models.ImageField(upload_to="article/imag", null=True, blank=True)
+    
+    title_6 = models.CharField(max_length=50, blank=True)
+    body_6 = models.TextField(blank=True)
+    image_body_6 = models.ImageField(upload_to="article/imag", null=True, blank=True)
+    
+    title_7 = models.CharField(max_length=50, blank=True)
+    body_7 = models.TextField(blank=True)
+    image_body_7 = models.ImageField(upload_to="article/imag", null=True, blank=True)
+    
+    title_9 = models.CharField(max_length=50, blank=True)
+    body_9 = models.TextField(blank=True)
+    image_body_9 = models.ImageField(upload_to="article/imag", null=True, blank=True)
+    
+    title_10 = models.CharField(max_length=50, blank=True)
+    body_10 = models.TextField(blank=True)
+    image_body_10 = models.ImageField(upload_to="article/imag", null=True, blank=True)
+    
+    title_11 = models.CharField(max_length=50, blank=True)
+    body_11 = models.TextField(blank=True)
+    image_body_11 = models.ImageField(upload_to="article/imag", null=True, blank=True)
+    
+    title_12 = models.CharField(max_length=50, blank=True)
+    body_12 = models.TextField(blank=True)
+    image_body_12 = models.ImageField(upload_to="article/imag", null=True, blank=True)
+    
+    title_13 = models.CharField(max_length=50, blank=True)
+    body_13 = models.TextField(blank=True)
+    image_body_13 = models.ImageField(upload_to="article/imag", null=True, blank=True)
+    
+    title_14 = models.CharField(max_length=50, blank=True)
+    body_14 = models.TextField(blank=True)
+    image_body_14 = models.ImageField(upload_to="article/imag", null=True, blank=True)
+
+    
 
     cateqory = models.ManyToManyField(Cateqory)
-    body_1 = models.TextField()
-    body_2 = models.TextField()
-    tip = models.TextField()
-    body_3 = models.TextField()
-    body_4 = models.TextField()
+    tip = models.TextField(blank=True)
+ 
     created = models.DateField(default=timezone.now())
-    image = models.ImageField(upload_to="image/article")
+    
 
 
 

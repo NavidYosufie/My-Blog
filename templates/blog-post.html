@@ -99,19 +99,150 @@
 									<span class="divider">|</span>
 									<span class="autor"><a href="#"><i class="fa fa-fw fa-user">{{ articles.author }}</i></a></span>
 									<span class="divider">|</span>
-									<span class="category"><a href="#"><i class="fa fa-fw fa-folder"></i>{{ articles.cateqory.title }}</a></span>
+									<span class="category"><a href="#"><i class="fa fa-fw fa-folder"></i>{{ articles.cateqory.0 }}</a></span>
 								</div>
+								{% if articles.image_body_1 %}
 								<h3>{{ articles.title_1 }}</h3>
+								<img src="{{ articles.image_body_1.url }}" alt="">
 								<p>{{ articles.body_1 }}</p>
+								{% else %}
+								<h3>{{ articles.title_1 }}</h3>
+								
+								<p>{{ articles.body_1 }}</p>
+								{% endif %}
+								<br>
+								{% if articles.image_body_2 %}
 								<h3>{{ articles.title_2 }}</h3>
 								<p>{{ articles.body_2 }}</p>
 								<img src="{{ articles.image_body_2.url }}" alt="">
+								{% else %}
+								<h3>{{ articles.title_2 }}</h3>
+								<p>{{ articles.body_2 }}</p>
+								{% endif %}
 								<blockquote>
 									<p>{{ articles.tip }}</p>
 									<footer><cite></cite></footer>
 								</blockquote>
+								<br>
+								{% if articles.image_body_3 %}
 								<h3>{{ articles.title_3 }}</h3>
 								<p>{{ articles.body_3 }}</p>
+								<img src="{{ articles.image_body_3.url }}" alt="">
+								{% else %}
+								<h3>{{ articles.title_3 }}</h3>
+								<p>{{ articles.body_3 }}</p>
+								{% endif %}
+								<span>
+								<br>
+								</span>
+								{% if articles.image_body_4 %}
+								<h3>{{ articles.title_4 }}</h3>
+								<p>{{ articles.body_4 }}</p>
+								<img src="{{ articles.image_body_4.url }}" alt="">
+								{% else %}
+								<h3>{{ articles.title_4 }}</h3>
+								<p>{{ articles.body_4 }}</p>
+								{% endif %}
+								<br>
+								</span>
+								{% if articles.image_body_5 %}
+								<h3>{{ articles.title_5 }}</h3>
+								<p>{{ articles.body_5 }}</p>
+								<img src="{{ articles.image_body_5.url }}" alt="">
+								{% else %}
+								<h3>{{ articles.title_5 }}</h3>
+								<p>{{ articles.body_5 }}</p>
+								{% endif %}
+								<br>
+								</span>
+								{% if articles.image_body_6 %}
+								<h3>{{ articles.title_6 }}</h3>
+								<p>{{ articles.body_6 }}</p>
+								<img src="{{ articles.image_body_6.url }}" alt="">
+								{% else %}
+								<h3>{{ articles.title_6 }}</h3>
+								<p>{{ articles.body_6 }}</p>
+								{% endif %}	
+								<br>
+								</span>
+								{% if articles.image_body_7 %}
+								<h3>{{ articles.title_7 }}</h3>
+								<p>{{ articles.body_7 }}</p>
+								<img src="{{ articles.image_body_7.url }}" alt="">
+								{% else %}
+								<h3>{{ articles.title_7 }}</h3>
+								<p>{{ articles.body_7 }}</p>
+								{% endif %}
+								<br>
+						        </span>
+								{% if articles.image_body_8 %}
+								<h3>{{ articles.title_8 }}</h3>
+								<p>{{ articles.body_8 }}</p>
+								<img src="{{ articles.image_body_7.url }}" alt="">
+								{% else %}
+								<h3>{{ articles.title_8 }}</h3>
+								<p>{{ articles.body_8 }}</p>
+								{% endif %}
+								<br>
+								</span>
+								{% if articles.image_body_9 %}
+								<h3>{{ articles.title_3 }}</h3>
+								<p>{{ articles.body_9 }}</p>
+								<img src="{{ articles.image_body_7.url }}" alt="">
+								{% else %}
+								<h3>{{ articles.title_9 }}</h3>
+								<p>{{ articles.body_9 }}</p>
+								{% endif %}
+								<br>
+								</span>
+								{% if articles.image_body_10 %}
+								<h3>{{ articles.title_10 }}</h3>
+								<p>{{ articles.body_10 }}</p>
+								<img src="{{ articles.image_body_7.url }}" alt="">
+								{% else %}
+								<h3>{{ articles.title_10 }}</h3>
+								<p>{{ articles.body_10 }}</p>
+								{% endif %}
+								<br>
+								</span>
+								{% if articles.image_body_11 %}
+								<h3>{{ articles.title_11 }}</h3>
+								<p>{{ articles.body_11 }}</p>
+								<img src="{{ articles.image_body_7.url }}" alt="">
+								{% else %}
+								<h3>{{ articles.title_11 }}</h3>
+								<p>{{ articles.body_11 }}</p>
+								{% endif %}
+								<br>
+								</span>
+								{% if articles.image_body_12 %}
+								<h3>{{ articles.title_12 }}</h3>
+								<p>{{ articles.body_12 }}</p>
+								<img src="{{ articles.image_body_7.url }}" alt="">
+								{% else %}
+								<h3>{{ articles.title_12 }}</h3>
+								<p>{{ articles.body_12 }}</p>
+								{% endif %}
+								<br>
+								</span>
+								{% if articles.image_body_13 %}
+								<h3>{{ articles.title_13 }}</h3>
+								<p>{{ articles.body_13 }}</p>
+								<img src="{{ articles.image_body_7.url }}" alt="">
+								{% else %}
+								<h3>{{ articles.title_13 }}</h3>
+								<p>{{ articles.body_13 }}</p>
+								{% endif %}
+								<br>
+								</span>
+								{% if articles.image_body_14 %}
+								<h3>{{ articles.title_14 }}</h3>
+								<p>{{ articles.body_14 }}</p>
+								<img src="{{ articles.image_body_7.url }}" alt="">
+								{% else %}
+								 <h3>{{ articles.title_14 }}</h3>
+								 <p>{{ articles.body_14 }}</p>
+								 {% endif %}
 							</div>
 							<!-- End of Blog Entry Content -->
 						</div>

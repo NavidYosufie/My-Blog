@@ -1,6 +1,5 @@
-from email import message
 from django.shortcuts import render
-from .models import Information, Contact_my, Cv_my, Article, Coment
+from .models import Information, Contact_my, Cv_my, Article, Coment, Cateqory
 
 
 
@@ -16,9 +15,9 @@ def about(request):
     my_cv = Cv_my.objects.all()
 
     articles = Article.objects.all()
-        
+    category = Cateqory.objects.all()    
 
-    return render(request, 'index.html', context={"about_me": information, "show_cv": my_cv, "articels": articles})
+    return render(request, 'index.html', context={"about_me": information, "show_cv": my_cv, "articels": articles, "category": category})
 
 
 
